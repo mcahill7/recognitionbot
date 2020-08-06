@@ -1,0 +1,17 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+      ruby: 2.6
+    commands:
+      - echo 'Build' action Install phase - install testing dependencies
+      - gem install cfn-nag
+  build:
+    commands:
+      - echo 'Build' action Pre-build phase - running cfn-nag on template.yaml
+      - cfn_nag_scan --input-path template.yaml
+artifacts:
+  files:
+    - '**/*'
+  name: ${RepositoryName}-build-artifacts-$(date +%Y-%m-%d)
