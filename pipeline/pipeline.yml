@@ -343,7 +343,7 @@ Resources:
       ServiceRole: !Ref ActionServiceRole
       Source:
         Type: CODEPIPELINE
-        BuildSpec: ./pipeline/build-spec.yaml
+        BuildSpec: ./pipeline/build-spec.yml
       TimeoutInMinutes: !Ref BuildTimeoutInMinutes
   ActionCreateRules:
     Type: AWS::CodeBuild::Project
@@ -376,5 +376,5 @@ Resources:
       ServiceRole: !Ref ActionServiceRole
       Source:
         Type: CODEPIPELINE
-        BuildSpec: ./pipeline/deploy-spec.yaml
+        BuildSpec: ./pipeline/deploy-spec.yml
       TimeoutInMinutes: !Ref BuildTimeoutInMinutes
