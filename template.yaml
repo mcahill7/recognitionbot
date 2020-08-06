@@ -9,7 +9,7 @@ Resources:
   Recognition:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/
+      CodeUri: .
       Handler: manage.main
       Runtime: python3.7
       Policies:
