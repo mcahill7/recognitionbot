@@ -15,3 +15,7 @@ Resources:
       Policies:
       - AWSLambdaExecute # Managed Policy
 
+  API:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
